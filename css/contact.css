@@ -1,0 +1,274 @@
+.top_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 549px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    margin-top: -110px;
+}
+
+.top_banner.mobile {
+    display: none;
+}
+
+.top_banner .en {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+.top_banner .cn {
+    font-size: 22px;
+    word-spacing: 20px;
+    margin-top: 16px;
+}
+
+.contact {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0 160px;
+}
+
+.contact .title {
+    font-size: 45px;
+    font-weight: 700;
+    color: #215c38;
+    text-align: center;
+}
+
+.contact .desc {
+    line-height: 35px;
+    text-align: center;
+    color: #215c38;
+    margin-top: 40px;
+}
+
+.contact .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.contact .form .userinfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.contact .form .userinfo li {
+    float: left;
+    flex: 1;
+}
+
+.contact .form .userinfo li:nth-child(2) {
+    flex: 1.5;
+}
+
+.contact .form .userinfo li:nth-child(n+2) {
+    margin-left: 25px;
+}
+
+.contact .form .userinfo p,
+.contact .form .message p,
+.contact .form .select p {
+    font-size: 14px;
+    color: #215c38;
+}
+
+.contact .form .userinfo li input {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 0 10px;
+    border: 2px solid #215c38;
+    border-radius: 10px;
+}
+
+.contact .form .message,
+.contact .form .select {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contact .form .message input {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 0 10px;
+    border: 2px solid #215c38;
+    border-radius: 10px;
+}
+
+.contact .form .select li p,
+.contact .form .message p {
+    font-size: 14px;
+    color: #215c38;
+}
+
+.contact .form .select li {
+    display: flex;
+    float: left;
+    width: 25%;
+    margin-top: 15px;
+}
+
+.contact .form .select li input {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    border: 2px solid #215c38;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact .form .select li input[type=checkbox]::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    visibility: visible;
+    padding-left: 0px;
+    text-align: center;
+    content: ' ';
+    border-radius: 10px;
+}
+
+.contact .form .select li input[type=checkbox]:checked::after {
+    content: "鉁�";
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #215c38;
+}
+
+.contact .form .select li p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #215c38;
+}
+
+.contact .form .hint {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact .form .submit-btn {
+    width: 120px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #215c38;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    word-spacing: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width:320px) and (max-width:769px) {
+    .top_banner.pc {
+        display: none;
+    }
+
+    .top_banner.mobile {
+        display: block;
+    }
+
+    .top_banner {
+        height: 361px;
+        margin-top: -50px;
+    }
+
+    .contact {
+        padding: 32px 0 20px;
+    }
+
+    .contact .title {
+        font-size: 28px;
+    }
+
+    .contact .desc {
+        font-size: 14px;
+        line-height: 28px;
+        margin-top: 22px;
+    }
+
+    .contact .form {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .contact .form .userinfo {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+
+    .contact .form .userinfo li {
+        width: 72%;
+    }
+
+    .contact .form .userinfo li:nth-child(n+2) {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .contact .form .userinfo li input::placeholder,
+    .contact .form .message input::placeholder {
+        font-size: 14px;
+    }
+
+    .contact .form .select ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact .form .select li {
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .contact .form .select li input {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .contact .form .select li p {
+        line-height: 20px;
+    }
+
+    .contact .form .hint {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:375px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}

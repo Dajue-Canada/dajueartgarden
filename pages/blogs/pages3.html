@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="renderer" content="webkit" />
+    <title>Blog</title>
+    <meta name="keywords" content="Blog" />
+    <meta name="description" content="Blog" />
+    <meta name="author" content="maigex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/list_article.css" />
+    <link rel="icon" type="image/png" href="/images/share.jpg" />
+    <script src="../../js/my-header.js"></script>
+    <script src="../../js/my-footer.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LQFT7L445F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LQFT7L445F");
+    </script>
+  </head>
+
+  <body class="mod_html5cut">
+    <my-header></my-header>
+
+    <div class="hint_popup">
+      <div class="hint">
+        <i class="iconfont icon-chenggong fl"></i>
+        <p class="fl pc">Your message has been sent. Thank you!</p>
+        <p class="fl mobile">Your message has been sent.<br />Thank you!</p>
+        <i id="close_popup" class="iconfont icon-chahao"></i>
+      </div>
+    </div>
+
+    <div
+      class="top_banner pc"
+      style="background-image: url(../../images/blogs/blog_banner.jpg)"
+    >
+      <!-- <p class="en">DAJUE BLOG</p>
+			<p class="cn">部 / 落 / 格 / 互 / 動</p> -->
+    </div>
+    <div
+      class="top_banner mobile"
+      style="background-image: url(../../images/blogs/blog_banner_mobile.jpg)"
+    >
+      <!-- <p class="en">DAJUE BLOG</p>
+			<p class="cn">部 / 落 / 格 / 互 / 動</p> -->
+    </div>
+
+    <div
+      class="news"
+      style="
+        background-image: url(/themes/default_en-us/Public/assets/images/blog_bg.png);
+      "
+    >
+      <div class="container">
+        <ul class="list clearfix">
+          <li>
+            <a href="./2022.11.20.html">
+              <img
+                src="../../images/blogs/65f746b6c817e177f18f2f167d372aab.jpg.thumb.jpg"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Starting Your Home Herb Garden</p>
+                <p class="desc">Tired of pricey, wilting store-b...</p>
+                <p class="date">DATE: 2022.11.21</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="pagination container">
+          <ul>
+            <li>
+              <a href="./pages1.html">Home</a>
+            </li>
+            <li>
+              <a href="./pages2.html">Prev</a>
+            </li>
+            <li>
+              <a href="./pages1.html"> 1</a>
+            </li>
+            <li>
+              <a href="./pages2.html"> 2</a>
+            </li>
+            <li class="active current"><span class="current">3</span></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <my-footer></my-footer>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/layer/layer.js" type="text/javascript"></script>
+    <script>
+      $(".header .nav-btn").click(function () {
+        if ($(".header .header-r").hasClass("active")) {
+          $(".header .header-r").removeClass("active");
+        } else {
+          $(".header .header-r").addClass("active");
+        }
+      });
+      $(".header .area-btn").click(function () {
+        if ($(".header .header-r").hasClass("active")) {
+          $(".header .header-r").removeClass("active");
+        } else {
+          $(".header .header-r").addClass("active");
+        }
+      });
+      // 手機導航開始
+      $(".header.mobile .area-btn").click(function () {
+        if ($(".header.mobile .header-l").hasClass("active")) {
+          $(".header.mobile .header-l").removeClass("active");
+        } else {
+          $(".header.mobile .header-l").addClass("active");
+        }
+      });
+      $(".header.mobile .nav>li>p").click(function () {
+        if ($(this).parent().find(".subnav-box").hasClass("active")) {
+          $(this).parent().find(".subnav-box").removeClass("active");
+        } else {
+          $(".header.mobile .nav>li .subnav-box").removeClass("active");
+          $(this).parent().find(".subnav-box").addClass("active");
+        }
+      });
+      $(".header.mobile .search-btn").click(function () {
+        if ($(".header.mobile .search").hasClass("active")) {
+          $(".header.mobile .search").removeClass("active");
+        } else {
+          $(".header.mobile .search").addClass("active");
+        }
+      });
+
+      // 手機導航結束
+      $("#close_popup").click(function () {
+        $(".hint_popup").css({ display: "none" });
+      });
+      $(".footer .bot .gotop").on("click", function () {
+        $("body, html").stop().animate(
+          {
+            scrollTop: 0,
+          },
+          300
+        );
+      });
+      $(".footer .wechat.mobile i").click(function () {
+        if ($(".footer .wechat.mobile").hasClass("active")) {
+          $(".footer .wechat.mobile").removeClass("active");
+        } else {
+          $(".footer .wechat.mobile").addClass("active");
+        }
+      });
+
+      function isBrowserWidthGreaterThan(threshold) {
+        const width = window.innerWidth || document.documentElement.clientWidth;
+        return width > threshold;
+      }
+
+      document.onkeydown = function (e) {
+        var e = event || window.event;
+        if (e.keyCode == 13) {
+          const breakpoint = 600; // 设定一个阈值
+          if (isBrowserWidthGreaterThan(breakpoint)) {
+            if ($("#keywordsd").val() != "") {
+              $("#headfilter").click();
+              return false;
+            }
+          } else {
+            window.location.href =
+              "./index.php?m=search&a=index&keyword=" + $("#keywordsdx").val();
+          }
+        }
+      };
+
+      function popupopen() {
+        $(".hint_popup").css({ display: "flex" });
+        setTimeout(function () {
+          $(".hint_popup").css({ display: "none" });
+        }, 3000);
+      }
+
+      $("#submit-post").click(function () {
+        if ($("#username").val() == "") {
+          layer.msg("Your name cannot be empty");
+          return false;
+        }
+        var email = $.trim($("#email").val());
+        if (IsEmail(email)) {
+          layer.msg("Your email is empty or incorrect");
+          return false;
+        }
+        if ($("#phone").val() == "") {
+          layer.msg("Your phone number cannot be empty");
+          return false;
+        }
+        $.ajax({
+          url: "/index.php?g=portal&m=index&a=addmsg",
+          type: "POST",
+          data: $("#allforma").serialize(),
+          timeout: 5000,
+          dataType: "json",
+          success: function (data, textStatus, jqXHR) {
+            if (data.status == 1 && data.state == "success") {
+              $("#username").val("");
+              $("#email").val("");
+              $("#phone").val("");
+              popupopen();
+            } else {
+              layer.msg(data.info, { icon: 5 });
+            }
+          },
+        });
+      });
+    </script>
+    <script src="../../js/swiper/swiper.min.js"></script>
+    <script src="../../js/fullpage-3.0.5.min.js"></script>
+  </body>
+</html>
