@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="renderer" content="webkit" />
@@ -65,6 +65,20 @@
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
+              style="background-image: url(./images/home/68a6e59ca9a86.jpg)"
+            >
+              <a
+                href="https://dajueartgarden.com/pages/news/2026.02.13"
+                target="_blank"
+              >
+                <h2 class="en">
+                  Bring Good Fortune Home <br />
+                  This Lunar New Year!
+                </h2>
+              </a>
+            </div>
+            <div
+              class="swiper-slide"
               style="background-image: url(./images/home/67e4b9ab187dd.jpg)"
             >
               <a
@@ -74,20 +88,6 @@
                 <h2 class="en">
                   DAJUE Garden &amp; Flowers<br />
                   Valentine's Day Flower Special – Early-Bird Pre-Order
-                </h2>
-              </a>
-            </div>
-            <div
-              class="swiper-slide"
-              style="background-image: url(./images/home/68a6e59ca9a86.jpg)"
-            >
-              <a
-                href="https://dajueartgarden.com/pages/news/2025.12.17"
-                target="_blank"
-              >
-                <h2 class="en">
-                  DAJUE Garden &amp; Flowers<br />
-                  December Month-Long Deals
                 </h2>
               </a>
             </div>
@@ -348,6 +348,17 @@
           <ul class="clearfix">
             <li>
               <a
+                href="https://www.dajueartgarden.com/pages/news/2026.02.03.html"
+              >
+                <img src="./images/news/2026.02.13-1.jpg" alt="" />
+                <div class="title">
+                  <p>Bring Good Fortune in Lunar New Year!</p>
+                </div>
+                <p class="date">2026.02.03</p>
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.dajueartgarden.com/pages/news/2026.01.15.html"
               >
                 <img src="./images/news/20260115.png" alt="" />
@@ -355,17 +366,6 @@
                   <p>Valentine's Day Flower Special – Early-Bird Pre-Order</p>
                 </div>
                 <p class="date">2026.01.15</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.dajueartgarden.com/pages/news/2025.12.17.html"
-              >
-                <img src="./images/news/2025.12.17.jpg" alt="" />
-                <div class="title">
-                  <p>December Month-Long Deals</p>
-                </div>
-                <p class="date">2025.12.17</p>
               </a>
             </li>
             <li>
@@ -468,7 +468,7 @@
           {
             scrollTop: 0,
           },
-          300
+          300,
         );
       });
       $(".footer .wechat.mobile i").click(function () {
@@ -555,7 +555,7 @@
             function (direction) {
               $(this).addClass("finished");
             },
-            { triggerOnce: true, offset: "95%" }
+            { triggerOnce: true, offset: "95%" },
           );
         },
         afterRender: function () {
